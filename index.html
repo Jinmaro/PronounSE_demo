@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PronounSE demo page</title>
+  <title>Demo | Your Paper Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      padding: 30px;
+      background: #fff;
+      margin: 40px 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #111;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      margin-top: 1.5em;
+      color: #444;
+    }
+    p {
+      margin-top: 0.5em;
+    }
+    .author {
+      font-size: 16px;
+      color: #666;
+    }
+    audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .link-button {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 8px 14px;
+      background-color: #007acc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .link-button:hover {
+      background-color: #005f99;
+    }
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello!</h1>
+  <div class="container">
+    <h1>Your Paper Title Here</h1>
+    <p class="author">Author Name<sup>1</sup>, Co-author Name<sup>2</sup><br>
+    <sup>1</sup>Affiliation A, <sup>2</sup>Affiliation B</p>
+
+    <h2>Abstract</h2>
+    <p>
+      This page provides the supplementary materials for our paper. We introduce a novel method for ... (You can summarize the abstract here.)
+    </p>
+
+    <h2>Audio Demos</h2>
+    <p>Reference Audio</p>
+    <audio controls src="audio/reference.wav"></audio>
+
+    <p>Generated Audio</p>
+    <audio controls src="audio/generated.wav"></audio>
+
+    <h2>Links</h2>
+    <a class="link-button" href="https://github.com/yourusername/project-a" target="_blank">GitHub</a>
+    <a class="link-button" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">arXiv</a>
+    <a class="link-button" href="https://www.youtube.com/watch?v=xxxxxx" target="_blank">Video</a>
+
+    <div class="footer">
+      &copy; 2025 Your Name. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>
