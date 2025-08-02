@@ -92,8 +92,8 @@
     overflow-x: auto;
     line-height: 1.4;
     margin-bottom: 10px;
-    word-wrap: break-word;
     white-space: pre-wrap;
+    word-wrap: break-word;
     }
 
     .bibtex-container pre {
@@ -112,7 +112,7 @@
     border-radius: 4px;
     cursor: pointer;
     }
-
+    
     .copy-button:hover {
         background-color: #005f99;
     }
@@ -197,23 +197,20 @@
     <h2>Citation</h2>
     <p>If you use this work, please cite our paper:</p>
     <div class="bibtex-container">
-        <pre class="bibtex">
-            @article{hoge,
-                title   = {hogehoge},
-                author  = {Riki Takizawa, Shigeyuki Hirai, Asako Kanezaki, Hitoshi Suda},
-                journal = {hoge},
-                volume  = {hoge},
-                number  = {hoge},
-                pages   = {hoge},
-                year    = {hoge},
-                doi     = {hoge}
-            }
-        </pre>
-        <button onclick="copyBibtex()" class="copy-button">
-            📋 Copy
-        </button>
+    <pre id="bibtex">@article{hoge,
+    title   = {hogehoge},
+    author  = {Riki Takizawa, Shigeyuki Hirai, Asako Kanezaki, Hitoshi Suda},
+    journal = {hoge},
+    volume  = {hoge},
+    number  = {hoge},
+    pages   = {hoge},
+    year    = {hoge},
+    doi     = {hoge}
+    }</pre>
+    <button onclick="copyBibtex()" class="copy-button">📋 Copy</button>
     </div>
     <p id="copy-message" style="font-size: 14px; color: green; display: none;">Copied!</p>
+
 
     <div class="footer">
       &copy; 2025 Riki Takizawa. All rights reserved.
