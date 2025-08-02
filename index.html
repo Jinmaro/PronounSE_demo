@@ -125,11 +125,11 @@
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 23px;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .author {
@@ -167,49 +167,52 @@
 <body>
   <div class="container">
     <h1>PronounSE: SFX Synthesizer from Language-Independent Vocal Mimicry</h1>
-    <p class="author">
-        Riki Takizawa<sup>1, 4</sup>, Shigeyuki Hirai<sup>2</sup>, Asako Kanezaki<sup>3</sup>, Hitoshi Suda<sup>4</sup><br>
-        <span class="affiliation">
-            <sup>1</sup>Graduate School of Kyoto Sangyo University, Japan<br>
-            <sup>2</sup>Kyoto Sangyo University, Japan<br>
-            <sup>3</sup>Institute of Science Tokyo, Japan<br>
-            <sup>4</sup>National Institute of Advanved Industrial Science and Technology, Japan
-        </span>
-    </p>
+        <p class="author">
+            Riki Takizawa<sup>1, 4</sup>, Shigeyuki Hirai<sup>2</sup>, Asako Kanezaki<sup>3</sup>, Hitoshi Suda<sup>4</sup><br>
+            <span class="affiliation">
+                <sup>1</sup>Graduate School of Kyoto Sangyo University, Japan<br>
+                <sup>2</sup>Kyoto Sangyo University, Japan<br>
+                <sup>3</sup>Institute of Science Tokyo, Japan<br>
+                <sup>4</sup>National Institute of Advanved Industrial Science and Technology, Japan
+            </span>
+        </p>
 
     <h2>Abstract</h2>
-    <img src="pics/proposedMethod.png" alt="Overview image" class="abstract-image">
-    <p>
-        This study proposes <b>PronounSE</b>, a sound effect synthesis method that utilizes only non-verbal vocal expressions mimicking sound effects, without requiring prior knowledge or experience in sound production techniques. Focusing on human articulatory capabilities, PronounSE learns the correspondence between variations in vocal mimicry and actual sound effects, <b>enabling the generation of sound effects that reflect the nuanced characteristics of vocal input</b>. In this study, we constructed <b>a new dataset centered on explosion sounds</b> and trained PronounSE accordingly, <b>successfully synthesizing explosion sounds that reflect the nuances of vocal mimicry</b>. Furthermore, we <b>designed novel evaluation metrics</b> and conducted comparative experiments with existing methods. 
-    </p>
+        <img src="pics/proposedMethod.png" alt="Overview image" class="abstract-image">
+        <p>
+            This study proposes <b>PronounSE</b>, a sound effect synthesis method that utilizes only non-verbal vocal expressions mimicking sound effects, without requiring prior knowledge or experience in sound production techniques. Focusing on human articulatory capabilities, PronounSE learns the correspondence between variations in vocal mimicry and actual sound effects, <b>enabling the generation of sound effects that reflect the nuanced characteristics of vocal input</b>. In this study, we constructed <b>a new dataset centered on explosion sounds</b> and trained PronounSE accordingly, <b>successfully synthesizing explosion sounds that reflect the nuances of vocal mimicry</b>. Furthermore, we <b>designed novel evaluation metrics</b> and conducted comparative experiments with existing methods. 
+        </p>
 
     <h2>Synthesis Sample</h2>
-    <p><b>Input Vocal Mimicry</b>: windy nuance with the explosion</p>
-    <audio controls src="audio/sample_input.wav"></audio>
+        <p><b>Input Vocal Mimicry</b>: windy nuance with the explosion</p>
+        <audio controls src="audio/sample_input.wav"></audio>
 
-    <p><b>Synthesized Audio</b>: nuance-reflective synthesized sound</p>
-    <audio controls src="audio/sample_output.wav"></audio>
+        <p><b>Synthesized Audio</b>: nuance-reflective synthesized sound</p>
+        <audio controls src="audio/sample_output.wav"></audio>
 
     <h2>Links</h2>
-    <a class="link-button" href="https://github.com/Jinmaro/PronounSE" target="_blank">PronounSE implementation and trained model</a>
-    <a class="link-button" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Paper</a>
+        <a class="link-button" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Paper</a>
+        <a class="link-button" href="https://github.com/Jinmaro/PronounSE" target="_blank">PronounSE implementation and trained model</a>
+        <a class="link-button" href="https://hogehoge" target="_blank">Evaluation Dataset</a>
 
     <h2>Citation</h2>
-    <p>If you use this work, please cite our paper:</p>
-    <div class="bibtex-container">
-    <pre id="bibtex">@article{hoge,
-    title   = {hogehoge},
-    author  = {Riki Takizawa, Shigeyuki Hirai, Asako Kanezaki, Hitoshi Suda},
-    journal = {hoge},
-    volume  = {hoge},
-    number  = {hoge},
-    pages   = {hoge},
-    year    = {hoge},
-    doi     = {hoge}
-    }</pre>
-    <button onclick="copyBibtex()" class="copy-button">📋 Copy</button>
-    </div>
-    <p id="copy-message" style="font-size: 14px; color: green; display: none;">Copied!</p>
+        <p>If you use this work, please cite our paper:</p>
+        <div class="bibtex-container">
+            <pre id="bibtex">
+                @article{hoge,
+                    title   = {hogehoge},
+                    author  = {Riki Takizawa, Shigeyuki Hirai, Asako Kanezaki, Hitoshi Suda},
+                    journal = {hoge},
+                    volume  = {hoge},
+                    number  = {hoge},
+                    pages   = {hoge},
+                    year    = {hoge},
+                    doi     = {hoge}
+                }
+            </pre>
+            <button onclick="copyBibtex()" class="copy-button">📋 Copy</button>
+        </div>
+        <p id="copy-message" style="font-size: 14px; color: green; display: none;">Copied!</p>
 
 
     <div class="footer">
