@@ -117,6 +117,43 @@
         background-color: #005f99;
     }
 
+    .audio-table-wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+    }
+
+    /* 表自体のスタイル */
+    .audio-table {
+    border-collapse: collapse;
+    min-width: 900px;          /* 横幅を確保（必要に応じて調整） */
+    }
+
+    .audio-table th,
+    .audio-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+    }
+
+    /* 列見出し */
+    .audio-table thead th {
+    background: #f2f2f2;
+    font-weight: 600;
+    }
+
+    /* Speaker 名セルはグレー背景で固定幅に */
+    .audio-table tbody th {
+    background: #fafafa;
+    white-space: nowrap;
+    padding: 6px 12px;
+    }
+
+    /* audio プレイヤーをコンパクトにする */
+    .audio-table audio {
+    width: 180px;   /* 好みで調整 */
+    }
+
     @media screen and (max-width: 600px) {
     .container {
         padding: 20px;
@@ -160,6 +197,9 @@
         font-size: 13px;
         margin-top: 30px;
     }
+    .audio-table audio {
+        width: 140px;
+    }
     }
 
   </style>
@@ -190,6 +230,72 @@
         <p><b>Synthesized Audio</b>: nuance-reflective synthesized sound</p>
         <audio controls src="audio/sample_output.wav"></audio>
 
+    <h2>Comparative Evaluation with Other methods</h2>
+        <div class="audio-table-wrapper">
+        <table class="audio-table">
+            <thead>
+            <tr>
+                <th>Speaker</th>
+                <th>Vocal&nbsp;Mimicry</th>
+                <th>PronounSE</th>
+                <th>T-Foley</th>
+                <th>Stable&nbsp;Audio&nbsp;2.0</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- m-01 (24-01) -->
+            <tr>
+                <th>m-01</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_sa2.wav"></audio></td>
+            </tr>
+            <!-- m-02 (24-02) -->
+            <tr>
+                <th>m-02</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_sa2.wav"></audio></td>
+            </tr>
+            <!-- m-03 (24-03) -->
+            <tr>
+                <th>m-03</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_sa2.wav"></audio></td>
+            </tr>
+            <!-- m-04 (24-04) -->
+            <tr>
+                <th>m-04</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_sa2.wav"></audio></td>
+            </tr>
+            <!-- m-05 (24-05) -->
+            <tr>
+                <th>m-05</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_sa2.wav"></audio></td>
+            </tr>
+            <!-- f-01 (24-06) -->
+            <tr>
+                <th>f-01</th>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_ours.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_tf.wav"></audio></td>
+                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_sa2.wav"></audio></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+
     <h2>Links</h2>
         <a class="link-button" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Paper</a>
         <a class="link-button" href="https://github.com/Jinmaro/PronounSE" target="_blank">PronounSE implementation and trained model</a>
@@ -213,7 +319,6 @@
             <button onclick="copyBibtex()" class="copy-button">📋 Copy</button>
         </div>
         <p id="copy-message" style="font-size: 14px; color: green; display: none;">Copied!</p>
-
 
     <div class="footer">
       &copy; 2025 Riki Takizawa. All rights reserved.
