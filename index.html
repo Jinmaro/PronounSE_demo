@@ -155,58 +155,68 @@
     }
 
     @media screen and (max-width: 600px) {
-    .container {
-        padding: 20px;
-        margin: 20px 10px;
-        box-shadow: none;
-    }
+        .container {
+            padding: 20px;
+            margin: 20px 10px;
+            box-shadow: none;
+        }
 
-    h1 {
-        font-size: 23px;
-    }
+        h1 {
+            font-size: 23px;
+        }
 
-    h2 {
-        font-size: 19px;
-    }
+        h2 {
+            font-size: 19px;
+        }
 
-    .author {
-        font-size: 16px;
-    }
+        .author {
+            font-size: 16px;
+        }
 
-    .affiliation {
-        font-size: 13px;
-    }
+        .affiliation {
+            font-size: 13px;
+        }
 
-    .copy-button {
-        font-size: 12px;
-        padding: 3px 8px;
-    }
+        .copy-button {
+            font-size: 12px;
+            padding: 3px 8px;
+        }
 
-    .link-button {
-        font-size: 14px;
-        padding: 6px 12px;
-        margin: 8px 6px 0 0;
-    }
+        .link-button {
+            font-size: 14px;
+            padding: 6px 12px;
+            margin: 8px 6px 0 0;
+        }
 
-    .bibtex-container {
-        font-size: 13px;
-        padding: 10px;
-    }
+        .bibtex-container {
+            font-size: 13px;
+            padding: 10px;
+        }
 
-    .footer {
-        font-size: 13px;
-        margin-top: 30px;
-    }
-    .audio-table audio {
-        width: 140px;
-    }
-    .metric-table{
-        font-size: 13px;       /* 全体を 13px に */
-        min-width: 640px;      /* 100px ほど短縮。列数が多い場合は調整 */
-    }
-    .metric-table th, .metric-table td{
-        padding: 4px 6px;      /* 余白を少し削減 */
-    }
+        .footer {
+            font-size: 13px;
+            margin-top: 30px;
+        }
+        .audio-table audio {
+            width: 140px;
+        }
+        .metric-table{
+            font-size: 13px;       /* 全体を 13px に */
+            min-width: 640px;      /* 100px ほど短縮。列数が多い場合は調整 */
+        }
+        .metric-table th, .metric-table td{
+            padding: 4px 6px;      /* 余白を少し削減 */
+        }
+        .repro-table      { font-size:13px; min-width:420px; }
+        .repro-table th,
+        .repro-table td   { padding:4px 6px; }
+        .nuance-table      { font-size:13px; min-width:780px; }
+        .nuance-table th,
+        .nuance-table td   { padding:4px 6px; }
+        .nature-table      { font-size:13px; min-width:580px; }
+        .nature-table th,
+        .nature-table td   { padding:4px 6px; }
+
     }
 
     .metric-table-wrapper{
@@ -239,6 +249,30 @@
     white-space:nowrap;
     }
 
+    .repro-wrapper { overflow-x:auto; margin-top:10px; }
+    .repro-table   { border-collapse:collapse; min-width:520px; font-size:15px; text-align:center; }
+
+    .repro-table th, .repro-table td { border:1px solid #ddd; padding:6px 10px; white-space:nowrap; }
+    .repro-table thead th            { background:#f2f2f2; font-weight:600; }
+    .repro-table tbody th            { background:#fafafa; font-weight:500; }
+
+    .nuance-wrapper { overflow-x:auto; margin-top:10px; }
+    .nuance-table   { border-collapse:collapse; min-width:960px; font-size:15px; text-align:center; }
+
+    .nuance-table th, .nuance-table td { border:1px solid #ddd; padding:6px 10px; white-space:nowrap; }
+    .nuance-table thead th             { background:#f2f2f2; font-weight:600; }
+    .nuance-table tbody th             { background:#fafafa; font-weight:500; }
+
+    .nature-wrapper { overflow-x:auto; margin-top:10px; }
+    .nature-table   { border-collapse:collapse; min-width:720px; font-size:15px; text-align:center; }
+
+    .nature-table th, .nature-table td { border:1px solid #ddd; padding:6px 10px; white-space:nowrap; }
+    .nature-table thead th             { background:#f2f2f2; font-weight:600; }
+    .nature-table tbody th             { background:#fafafa; font-weight:500; }
+
+    .col-pronounse{ background:#e5f2ff; }  /* 青 */
+    .col-tfoley  { background:#e8f7e8; }   /* 緑 */
+    .col-sa2     { background:#ffeceb; }   /* ピンク */
 
   </style>
 </head>
@@ -347,54 +381,108 @@
             <div class="metric-table-wrapper">
                 <table class="metric-table">
                     <thead>
-                    <!-- 1行目：大見出し -->
                     <tr>
-                        <th rowspan="2">Speaker ID</th>
+                        <th rowspan="2">Speaker&nbsp;ID</th>
                         <th colspan="3">FAD by PANNs ↓</th>
                         <th colspan="3">Cosine similarity&nbsp;±&nbsp;SD ↑</th>
                     </tr>
-                    <!-- 2行目：手法名 -->
                     <tr>
-                        <th>PronounSE</th><th>T-Foley</th><th>Stable Audio 2.0</th>
-                        <th>PronounSE</th><th>T-Foley</th><th>Stable Audio 2.0</th>
+                        <th class="col-pronounse">PronounSE</th>
+                        <th class="col-tfoley">T-Foley</th>
+                        <th class="col-sa2">Stable&nbsp;Audio&nbsp;2.0</th>
+
+                        <th class="col-pronounse">PronounSE</th>
+                        <th class="col-tfoley">T-Foley</th>
+                        <th class="col-sa2">Stable&nbsp;Audio&nbsp;2.0</th>
                     </tr>
                     </thead>
+
                     <tbody>
+                    <!-- m-01 -->
                     <tr><th>m-01</th>
-                        <td><b>17.85</b></td><td>54.02</td><td>21.35</td>
-                        <td><b>0.85&nbsp;±&nbsp;0.08</b></td><td>0.73&nbsp;±&nbsp;0.07</td><td>0.83&nbsp;±&nbsp;0.06</td></tr>
+                        <td class="col-pronounse"><b>17.85</b></td>
+                        <td class="col-tfoley">54.02</td>
+                        <td class="col-sa2">21.35</td>
 
+                        <td class="col-pronounse"><b>0.85&nbsp;±&nbsp;0.08</b></td>
+                        <td class="col-tfoley">0.73&nbsp;±&nbsp;0.07</td>
+                        <td class="col-sa2">0.83&nbsp;±&nbsp;0.06</td>
+                    </tr>
+
+                    <!-- m-02 -->
                     <tr><th>m-02</th>
-                        <td><b>17.05</b></td><td>54.47</td><td>20.94</td>
-                        <td><b>0.86&nbsp;±&nbsp;0.06</b></td><td>0.74&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+                        <td class="col-pronounse"><b>17.05</b></td>
+                        <td class="col-tfoley">54.47</td>
+                        <td class="col-sa2">20.94</td>
 
+                        <td class="col-pronounse"><b>0.86&nbsp;±&nbsp;0.06</b></td>
+                        <td class="col-tfoley">0.74&nbsp;±&nbsp;0.07</td>
+                        <td class="col-sa2">0.84&nbsp;±&nbsp;0.06</td>
+                    </tr>
+
+                    <!-- m-03 -->
                     <tr><th>m-03</th>
-                        <td><b>17.28</b></td><td>48.85</td><td>20.95</td>
-                        <td><b>0.86&nbsp;±&nbsp;0.07</b></td><td>0.75&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+                        <td class="col-pronounse"><b>17.28</b></td>
+                        <td class="col-tfoley">48.85</td>
+                        <td class="col-sa2">20.95</td>
 
+                        <td class="col-pronounse"><b>0.86&nbsp;±&nbsp;0.07</b></td>
+                        <td class="col-tfoley">0.75&nbsp;±&nbsp;0.07</td>
+                        <td class="col-sa2">0.84&nbsp;±&nbsp;0.06</td>
+                    </tr>
+
+                    <!-- m-04 -->
                     <tr><th>m-04</th>
-                        <td><b>16.65</b></td><td>48.52</td><td>21.46</td>
-                        <td><b>0.85&nbsp;±&nbsp;0.07</b></td><td>0.75&nbsp;±&nbsp;0.08</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+                        <td class="col-pronounse"><b>16.65</b></td>
+                        <td class="col-tfoley">48.52</td>
+                        <td class="col-sa2">21.46</td>
 
+                        <td class="col-pronounse"><b>0.85&nbsp;±&nbsp;0.07</b></td>
+                        <td class="col-tfoley">0.75&nbsp;±&nbsp;0.08</td>
+                        <td class="col-sa2">0.84&nbsp;±&nbsp;0.06</td>
+                    </tr>
+
+                    <!-- m-05 -->
                     <tr><th>m-05</th>
-                        <td><b>19.29</b></td><td>47.89</td><td>19.75</td>
-                        <td><b>0.86&nbsp;±&nbsp;0.07</b></td><td>0.75&nbsp;±&nbsp;0.08</td><td>0.85&nbsp;±&nbsp;0.07</td></tr>
+                        <td class="col-pronounse"><b>19.29</b></td>
+                        <td class="col-tfoley">47.89</td>
+                        <td class="col-sa2">19.75</td>
 
+                        <td class="col-pronounse"><b>0.86&nbsp;±&nbsp;0.07</b></td>
+                        <td class="col-tfoley">0.75&nbsp;±&nbsp;0.08</td>
+                        <td class="col-sa2">0.85&nbsp;±&nbsp;0.07</td>
+                    </tr>
+
+                    <!-- f-01 -->
                     <tr><th>f-01</th>
-                        <td><b>19.28</b></td><td>56.94</td><td>22.01</td>
-                        <td>0.85&nbsp;±&nbsp;0.07</td><td>0.72&nbsp;±&nbsp;0.07</td><td><b>0.85&nbsp;±&nbsp;0.06</b></td></tr>
+                        <td class="col-pronounse"><b>19.28</b></td>
+                        <td class="col-tfoley">56.94</td>
+                        <td class="col-sa2">22.01</td>
 
+                        <td class="col-pronounse">0.85&nbsp;±&nbsp;0.07</td>
+                        <td class="col-tfoley">0.72&nbsp;±&nbsp;0.07</td>
+                        <td class="col-sa2"><b>0.85&nbsp;±&nbsp;0.06</b></td>
+                    </tr>
+
+                    <!-- Whole -->
                     <tr><th>Whole</th>
-                        <td><b>14.09</b></td><td>55.93</td><td>21.15</td>
-                        <td><b>0.85&nbsp;±&nbsp;0.07</b></td><td>0.74&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+                        <td class="col-pronounse"><b>14.09</b></td>
+                        <td class="col-tfoley">55.93</td>
+                        <td class="col-sa2">21.15</td>
+
+                        <td class="col-pronounse"><b>0.85&nbsp;±&nbsp;0.07</b></td>
+                        <td class="col-tfoley">0.74&nbsp;±&nbsp;0.07</td>
+                        <td class="col-sa2">0.84&nbsp;±&nbsp;0.06</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
-            <br>
+
+        <br>
 
         <p><b>Subjective Fidelity Evaluation (Fidelity MOS)</b></p>
-            <div class="mos-table-wrapper">
-                <table class="metric-table">
+            <div class="repro-wrapper">
+                <table class="repro-table">
                     <thead>
                     <tr>
                         <th>Speaker&nbsp;ID</th>
@@ -417,8 +505,8 @@
 
         <br>
         <p><b>Subjective Nuance Reflection Evaluation (Attack MOS, Release MOS, Overall MOS)</b></p>
-            <div class="mos-table-wrapper">
-                <table class="metric-table">
+            <div class="nuance-wrapper">
+                <table class="nuance-table">
                     <thead>
                     <tr>
                         <th rowspan="2">Speaker&nbsp;ID</th>
@@ -488,8 +576,8 @@
 
         <br>
         <p><b>Subjective Naturalness and Sound Quality Evaluation (Naturallness MOS, Quality MOS)</b></p>
-        <div class="mos-table-wrapper">
-            <table class="metric-table">
+        <div class="nature-wrapper">
+            <table class="nature-table">
                 <!-- 1 行目：指標見出し -->
                 <thead>
                 <tr>
