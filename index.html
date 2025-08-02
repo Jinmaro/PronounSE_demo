@@ -201,11 +201,12 @@
             width: 140px;
         }
         .metric-table{
-            font-size: 13px;       /* 全体を 13px に */
-            min-width: 640px;      /* 100px ほど短縮。列数が多い場合は調整 */
+            font-size: 13px;
+            min-width: 680px;   /* 横スクロール量を軽減 */
         }
-        .metric-table th, .metric-table td{
-            padding: 4px 6px;      /* 余白を少し削減 */
+        .metric-table th,
+        .metric-table td{
+            padding: 4px 6px;
         }
         .repro-table      { font-size:13px; min-width:420px; }
         .repro-table th,
@@ -220,33 +221,32 @@
     }
 
     .metric-table-wrapper{
-    overflow-x:auto;   /* 横スクロール */
-    margin-top:10px;
+    overflow-x: auto;   /* スマホで横スワイプ可 */
+    margin-top: 10px;
     }
 
     .metric-table{
-    border-collapse:collapse;
-    min-width:760px;   /* 列が収まるまで確保。必要なら調整 */
-    font-size:15px;
-    text-align:center;
+    border-collapse: collapse;
+    min-width: 820px;   /* 6 データ列 + 1 ID 列に合わせて確保 */
+    font-size: 15px;
+    text-align: center;
     }
 
     .metric-table th,
     .metric-table td{
-    border:1px solid #ddd;
-    padding:6px 10px;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    white-space: nowrap;
     }
 
     .metric-table thead th{
-    background:#f2f2f2;
-    font-weight:600;
-    white-space:nowrap;
+    background: #f2f2f2;
+    font-weight: 600;
     }
 
     .metric-table tbody th{
-    background:#fafafa;
-    font-weight:500;
-    white-space:nowrap;
+    background: #fafafa;
+    font-weight: 500;
     }
 
     .repro-wrapper { overflow-x:auto; margin-top:10px; }
