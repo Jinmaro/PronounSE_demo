@@ -416,7 +416,7 @@
             </div>
 
         <br>
-        <p><b></b></p>
+        <p><b>Subjective Nuance Reflection Evaluation (Attack MOS, Release MOS, Overall MOS)</b></p>
             <div class="mos-table-wrapper">
                 <table class="metric-table">
                     <thead>
@@ -486,6 +486,69 @@
                 </table>
             </div>
 
+        <br>
+        <p><b>Subjective Naturalness and Sound Quality Evaluation (Naturallness MOS, Quality MOS)</b></p>
+        <div class="mos-table-wrapper">
+            <table class="metric-table">
+                <!-- 1 行目：指標見出し -->
+                <thead>
+                <tr>
+                    <th rowspan="2">Speaker&nbsp;ID</th>
+                    <th colspan="3">Naturalness&nbsp;(Ground&nbsp;Truth:&nbsp;3.70&nbsp;±&nbsp;0.11)</th>
+                    <th colspan="3">Sound&nbsp;Quality&nbsp;(Ground&nbsp;Truth:&nbsp;3.70&nbsp;±&nbsp;0.10)</th>
+                </tr>
+                <!-- 2 行目：手法名（PronounSE → T-Foley → SA2） -->
+                <tr>
+                    <th class="col-pronounse">PronounSE</th><th class="col-tfoley">T-Foley</th><th class="col-sa2">Stable&nbsp;Audio&nbsp;2.0</th>
+                    <th class="col-pronounse">PronounSE</th><th class="col-tfoley">T-Foley</th><th class="col-sa2">Stable&nbsp;Audio&nbsp;2.0</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <!-- m-01 -->
+                <tr><th>m-01</th>
+                    <td class="col-pronounse"><b>3.50 ± 0.11</b></td><td class="col-tfoley">2.86 ± 0.12</td><td class="col-sa2">3.29 ± 0.11</td>
+                    <td class="col-pronounse"><b>3.36 ± 0.11</b></td><td class="col-tfoley">2.73 ± 0.12</td><td class="col-sa2"><b>3.36 ± 0.10</b></td>
+                </tr>
+
+                <!-- m-02 -->
+                <tr><th>m-02</th>
+                    <td class="col-pronounse">3.09 ± 0.12</td><td class="col-tfoley">2.56 ± 0.11</td><td class="col-sa2"><b>3.42 ± 0.10</b></td>
+                    <td class="col-pronounse"><b>3.16 ± 0.11</b></td><td class="col-tfoley">2.47 ± 0.11</td><td class="col-sa2">3.45 ± 0.10</td>
+                </tr>
+
+                <!-- m-03 -->
+                <tr><th>m-03</th>
+                    <td class="col-pronounse">3.46 ± 0.11</td><td class="col-tfoley">2.82 ± 0.12</td><td class="col-sa2"><b>3.48 ± 0.10</b></td>
+                    <td class="col-pronounse"><b>3.32 ± 0.10</b></td><td class="col-tfoley">2.55 ± 0.11</td><td class="col-sa2">3.52 ± 0.10</td>
+                </tr>
+
+                <!-- m-04 -->
+                <tr><th>m-04</th>
+                    <td class="col-pronounse">3.55 ± 0.11</td><td class="col-tfoley">2.95 ± 0.12</td><td class="col-sa2"><b>3.57 ± 0.10</b></td>
+                    <td class="col-pronounse"><b>3.39 ± 0.10</b></td><td class="col-tfoley">2.83 ± 0.12</td><td class="col-sa2">3.48 ± 0.10</td>
+                </tr>
+
+                <!-- m-05 -->
+                <tr><th>m-05</th>
+                    <td class="col-pronounse">2.93 ± 0.12</td><td class="col-tfoley">2.69 ± 0.11</td><td class="col-sa2"><b>3.72 ± 0.10</b></td>
+                    <td class="col-pronounse">2.95 ± 0.11</td><td class="col-tfoley">2.49 ± 0.11</td><td class="col-sa2"><b>3.57 ± 0.10</b></td>
+                </tr>
+
+                <!-- f-01 -->
+                <tr><th>f-01</th>
+                    <td class="col-pronounse">3.14 ± 0.12</td><td class="col-tfoley">2.76 ± 0.12</td><td class="col-sa2"><b>3.53 ± 0.11</b></td>
+                    <td class="col-pronounse">2.99 ± 0.11</td><td class="col-tfoley">2.69 ± 0.11</td><td class="col-sa2"><b>3.45 ± 0.10</b></td>
+                </tr>
+
+                <!-- whole -->
+                <tr><th>Whole</th>
+                    <td class="col-pronounse">3.28 ± 0.05</td><td class="col-tfoley">2.77 ± 0.05</td><td class="col-sa2"><b>3.50 ± 0.04</b></td>
+                    <td class="col-pronounse">3.19 ± 0.04</td><td class="col-tfoley">2.62 ± 0.05</td><td class="col-sa2"><b>3.47 ± 0.04</b></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
     <h2>Links</h2>
         <a class="link-button" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Paper</a>
