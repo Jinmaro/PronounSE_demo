@@ -200,7 +200,45 @@
     .audio-table audio {
         width: 140px;
     }
+    .metric-table{
+        font-size: 13px;       /* 全体を 13px に */
+        min-width: 640px;      /* 100px ほど短縮。列数が多い場合は調整 */
     }
+    .metric-table th, .metric-table td{
+        padding: 4px 6px;      /* 余白を少し削減 */
+    }
+    }
+
+    .metric-table-wrapper{
+    overflow-x:auto;   /* 横スクロール */
+    margin-top:10px;
+    }
+
+    .metric-table{
+    border-collapse:collapse;
+    min-width:760px;   /* 列が収まるまで確保。必要なら調整 */
+    font-size:15px;
+    text-align:center;
+    }
+
+    .metric-table th,
+    .metric-table td{
+    border:1px solid #ddd;
+    padding:6px 10px;
+    }
+
+    .metric-table thead th{
+    background:#f2f2f2;
+    font-weight:600;
+    white-space:nowrap;
+    }
+
+    .metric-table tbody th{
+    background:#fafafa;
+    font-weight:500;
+    white-space:nowrap;
+    }
+
 
   </style>
 </head>
@@ -242,68 +280,116 @@
         <audio controls controlsList="nodownload" controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_protected.wav"></audio>
         <p><b>Vocal Mimicry and Synthesized Sounds</b></p>
         <div class="audio-table-wrapper">
-        <table class="audio-table">
-            <thead>
-            <tr>
-                <th>Speaker</th>
-                <th>Vocal&nbsp;Mimicry</th>
-                <th>PronounSE</th>
-                <th>T-Foley</th>
-                <th>Stable&nbsp;Audio&nbsp;2.0</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- m-01 (24-01) -->
-            <tr>
-                <th>m-01</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_sa2.wav"></audio></td>
-            </tr>
-            <!-- m-02 (24-02) -->
-            <tr>
-                <th>m-02</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_sa2.wav"></audio></td>
-            </tr>
-            <!-- m-03 (24-03) -->
-            <tr>
-                <th>m-03</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_sa2.wav"></audio></td>
-            </tr>
-            <!-- m-04 (24-04) -->
-            <tr>
-                <th>m-04</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_sa2.wav"></audio></td>
-            </tr>
-            <!-- m-05 (24-05) -->
-            <tr>
-                <th>m-05</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_sa2.wav"></audio></td>
-            </tr>
-            <!-- f-01 (24-06) -->
-            <tr>
-                <th>f-01</th>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_ours.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_tf.wav"></audio></td>
-                <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_sa2.wav"></audio></td>
-            </tr>
-            </tbody>
-        </table>
+            <table class="audio-table">
+                <thead>
+                <tr>
+                    <th>Speaker</th>
+                    <th>Vocal&nbsp;Mimicry</th>
+                    <th>PronounSE</th>
+                    <th>T-Foley</th>
+                    <th>Stable&nbsp;Audio&nbsp;2.0</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- m-01 (24-01) -->
+                <tr>
+                    <th>m-01</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-01_sa2.wav"></audio></td>
+                </tr>
+                <!-- m-02 (24-02) -->
+                <tr>
+                    <th>m-02</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-02_sa2.wav"></audio></td>
+                </tr>
+                <!-- m-03 (24-03) -->
+                <tr>
+                    <th>m-03</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-03_sa2.wav"></audio></td>
+                </tr>
+                <!-- m-04 (24-04) -->
+                <tr>
+                    <th>m-04</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-04_sa2.wav"></audio></td>
+                </tr>
+                <!-- m-05 (24-05) -->
+                <tr>
+                    <th>m-05</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-05_sa2.wav"></audio></td>
+                </tr>
+                <!-- f-01 (24-06) -->
+                <tr>
+                    <th>f-01</th>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_ours.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_tf.wav"></audio></td>
+                    <td><audio controls src="audio/for_comparison/EXP_FX_Explosion_Destruction_11_ST_trimmed_24-06_sa2.wav"></audio></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
+
+        <p><b>Objective Fidelity Evaluation with FAD [3] and Cosine Similarity</b></p>
+            <div class="metric-table-wrapper">
+                <table class="metric-table">
+                    <thead>
+                    <!-- 1行目：大見出し -->
+                    <tr>
+                        <th rowspan="2">Speaker ID</th>
+                        <th colspan="3">FAD by PANNs ↓</th>
+                        <th colspan="3">Cosine similarity&nbsp;±&nbsp;SD ↑</th>
+                    </tr>
+                    <!-- 2行目：手法名 -->
+                    <tr>
+                        <th>PronounSE</th><th>T-Foley</th><th>Stable Audio 2.0</th>
+                        <th>PronounSE</th><th>T-Foley</th><th>Stable Audio 2.0</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>m-01</th>
+                        <td>17.85</td><td>54.02</td><td>21.35</td>
+                        <td>0.85&nbsp;±&nbsp;0.08</td><td>0.73&nbsp;±&nbsp;0.07</td><td>0.83&nbsp;±&nbsp;0.06</td></tr>
+
+                    <tr><th>m-02</th>
+                        <td>17.05</td><td>54.47</td><td>20.94</td>
+                        <td>0.86&nbsp;±&nbsp;0.06</td><td>0.74&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+
+                    <tr><th>m-03</th>
+                        <td>17.28</td><td>48.85</td><td>20.95</td>
+                        <td>0.86&nbsp;±&nbsp;0.07</td><td>0.75&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+
+                    <tr><th>m-04</th>
+                        <td>16.65</td><td>48.52</td><td>21.46</td>
+                        <td>0.85&nbsp;±&nbsp;0.07</td><td>0.75&nbsp;±&nbsp;0.08</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+
+                    <tr><th>m-05</th>
+                        <td>19.29</td><td>47.89</td><td>19.75</td>
+                        <td>0.86&nbsp;±&nbsp;0.07</td><td>0.75&nbsp;±&nbsp;0.08</td><td>0.85&nbsp;±&nbsp;0.07</td></tr>
+
+                    <tr><th>f-01</th>
+                        <td>19.28</td><td>56.94</td><td>22.01</td>
+                        <td>0.85&nbsp;±&nbsp;0.07</td><td>0.72&nbsp;±&nbsp;0.07</td><td>0.85&nbsp;±&nbsp;0.06</td></tr>
+
+                    <tr><th>Whole</th>
+                        <td><b>14.09</b></td><td>55.93</td><td>21.15</td>
+                        <td><b>0.85&nbsp;±&nbsp;0.07</b></td><td>0.74&nbsp;±&nbsp;0.07</td><td>0.84&nbsp;±&nbsp;0.06</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
 
     <h2>Links</h2>
